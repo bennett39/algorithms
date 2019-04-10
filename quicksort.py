@@ -8,7 +8,7 @@ def quicksort(unsorted, lo, hi):
             bumper += 1
             unsorted[i], unsorted[bumper] = unsorted[bumper], unsorted[i]
     unsorted[lo], unsorted[bumper] = unsorted[bumper], unsorted[lo]
-    quicksort(unsorted, lo, bumper-1)
+    quicksort(unsorted, lo, bumper)
     quicksort(unsorted, bumper+1, hi)
     return unsorted
 
