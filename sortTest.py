@@ -13,7 +13,7 @@ def timer(f):
         begin = default_timer()
         result = f(*args, **kwargs)
         end = default_timer()
-        print(f"Function took {end - begin} seconds to compute.")
+        print(f"{f.__name__} took {end - begin} seconds to compute.")
         return result
     return wrapper
 
