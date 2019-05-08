@@ -1,3 +1,5 @@
+from sortTest import timer
+
 class Node(object):
     def __init__(self, val=None):
         self.val = val
@@ -28,6 +30,7 @@ class LinkedList(object):
             print(node.val)
             node = node.next
 
+    @timer
     def reverse(self):
         node = self.root
         prev = None

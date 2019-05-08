@@ -8,12 +8,12 @@ def main():
     assert sorted_timed(test_data) == quicksort_timed(test_data) \
             == mergesort_timed(test_data)
 
-def timer(f):
+def timer(func):
     def wrapper(*args, **kwargs):
         begin = default_timer()
-        result = f(*args, **kwargs)
+        result = func(*args, **kwargs)
         end = default_timer()
-        print(f"{f.__name__} took {end - begin} seconds to compute.")
+        print(f"{func.__name__} took {end - begin} seconds to compute.")
         return result
     return wrapper
 
@@ -31,7 +31,7 @@ def mergesort_timed(*args, **kwargs):
     return mergesort(*args, **kwargs)
 
 def generate_random_list(length):
-    return [random.randint(-100, 100) for _ in range(length)]
+    return [random.randint(-1000, 1000) for _ in range(length)]
 
 
 if __name__ == "__main__":
