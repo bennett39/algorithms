@@ -1,6 +1,8 @@
-def odds(n):
-    """ Prints all odd numbers less than n. """
-    for i in range(1, n, 2):
+def odds(m, n):
+    """ Prints all odd numbers in range m - n. m is optional """
+    if not m & 1:
+        m += 1
+    for i in range(m, n, 2):
         print(i)
 
-odds(10)
+odds(0, 10)
