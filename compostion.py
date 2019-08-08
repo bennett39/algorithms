@@ -16,3 +16,8 @@ class Housemate:
         self.eater = eater
         self.pooper = pooper
         self.cleaner = cleaner
+
+    def eat(self):
+        if not hasattr(self, "eater"):
+            raise NotImplementedError()
+        self.eater.eat()
